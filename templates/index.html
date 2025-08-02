@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Resume Analyzer</title>
+</head>
+<body>
+    <h1>Smart Resume Analyzer</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label>Job Description:</label><br>
+        <textarea name="job_description" rows="6" cols="50" required></textarea><br><br>
+
+        <label>Upload Resumes (PDF only):</label><br>
+        <input type="file" name="resumes" multiple required><br><br>
+
+        <input type="submit" value="Analyze">
+    </form>
+</body>
+</html>

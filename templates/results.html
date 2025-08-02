@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Ranking Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+        th { background: #f4f4f4; }
+        a { display: inline-block; margin-top: 20px; text-decoration: none; color: #007bff; }
+    </style>
+</head>
+<body>
+    <h1>Resume Ranking Results</h1>
+    <table>
+        <tr>
+            <th>Rank</th>
+            <th>Resume</th>
+            <th>Similarity Score</th>
+        </tr>
+        {% for resume, score in ranked_data %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ resume }}</td>
+            <td>{{ "%.4f"|format(score) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Analyze Again</a>
+</body>
+</html>
